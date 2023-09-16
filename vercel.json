@@ -1,4 +1,3 @@
-
 {
   "version": 2,
   "builds": [
@@ -17,12 +16,19 @@
   ],
   "routes": [
     {
-      "src": "/static/(.*)",
-      "dest": "/static/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "populationCalc/wsgi.py"
+    },
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
     }
-  ]
+  ],
+  "github": {
+    "silent": true,
+    "autoAlias": false
+  },
+  "git": {
+    "scopes": ["main"]
+  }
 }
