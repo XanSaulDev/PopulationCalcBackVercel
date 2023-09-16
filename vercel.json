@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "Config/wsgi.py",
+        "src": "populationCalc/wsgi.py",
         "use": "@vercel/python",
         "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
       },
@@ -17,7 +17,7 @@
     "routes": [
       {
         "src": "/(.*)",
-        "dest": "Config/wsgi.py"
+        "dest": "populationCalc/wsgi.py"
       },
       {
         "src": "/static/(.*)",
