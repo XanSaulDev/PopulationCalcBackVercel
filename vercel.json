@@ -1,4 +1,5 @@
-{
+
+  {
     "version": 2,
     "builds": [
       {
@@ -10,28 +11,20 @@
         "src": "build_files.sh",
         "use": "@vercel/static-build",
         "config": {
-          "distDir": "staticfiles"
+          "distDir": "staticfiles_build"
         }
       }
     ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "populationCalc/wsgi.py"
-      },
-      {
         "src": "/static/(.*)",
         "dest": "/static/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "populationCalc/wsgi.py"
       }
-    ],
-    "github": {
-      "silent": true,
-      "autoAlias": false
-    },
-    "git": {
-      "scopes": ["main"]
-    }
+    ]
   }
-
-
+  
   
