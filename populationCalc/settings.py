@@ -78,7 +78,8 @@ TEMPLATES = [
 
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:3000",
-    "https://population-calc-front-vercel.vercel.app"
+    "https://population-calc-front-vercel.vercel.app",
+    "https://population-calc-front.vercel.app/"
 ]
 
 
