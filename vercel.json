@@ -30,10 +30,7 @@
     },
     "git": {
       "scopes": ["main"]
-    },
-    "rewrites": [
-      { "source": "/(.*)", "destination": "/" }
-    ]
+    }
   }
 
 
