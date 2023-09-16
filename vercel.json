@@ -1,34 +1,27 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "Config/wsgi.py",
-        "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
-      },
-      {
-        "src": "build_files.sh",
-        "use": "@vercel/static-build",
-        "config": {
-          "distDir": "staticfiles"
-        }
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*)",
-        "dest": "Config/wsgi.py"
-      },
-      {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-      }
-    ],
-    "github": {
-      "silent": true,
-      "autoAlias": false
+  "version": 2,
+  "builds": [
+    {
+      "src": "populationCalc/wsgi.py",
+      "use": "@vercel/python",
+      "config": { "maxLambdaSize": "15mb", "runtime": "python3.9" }
     },
-    "git": {
-      "scopes": ["main"]
+    {
+      "src": "build_files.sh",
+      "use": "@vercel/static-build",
+      "config": {
+        "distDir": "staticfiles"
+      }
     }
-  }
+  ],
+  "routes": [
+    {
+      "src": "/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": "/(.*)",
+      "dest": "populationCalc/wsgi.py"
+    }
+  ]
+}
