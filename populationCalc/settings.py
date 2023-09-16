@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'rest_framework',
     'calcapi',
     'corsheaders',
-    'psycopg2',
 ]
 
 MIDDLEWARE = [
